@@ -1,0 +1,30 @@
+Airtime Vagrantfiles
+=====================
+
+This repository contains Vagrantfiles for automated installation testing and development of Airtime
+on a number of different Linux distributions.
+
+To use these, first add the vagrant boxes corresponding to whichever distros you'd like to test.
+You can add them by running:
+
+    vagrant box add ubuntu/vivid64 https://cloud-images.ubuntu.com/vagrant/vivid/current/vivid-server-cloudimg-amd64-vagrant-disk1.box
+    vagrant box add ubuntu/utopic64 https://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-amd64-vagrant-disk1.box
+    vagrant box add ubuntu/saucy64 https://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box
+    vagrant box add ubuntu/trusty64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+    vagrant box add ubuntu/precise64 https://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
+    vagrant box add thoughtbot/debian-wheezy-64
+
+Second, ensure you have a checkout of Airtime in a directory beside this repository. Your directory
+layout should look something like this:
+
+    ~/airtime           ---> your clone of airtime from git
+    ~/airtime-vagrant   ---> your clone of airtime-vagrant from git
+
+Lastly, change to one of the directories and vagrant up to start a virtual machine and install Airtime:
+
+    $ cd trusty64
+    $ vagrant up
+
+Airtime will be accessible via localhost:8080 on your host machine, and inside the virtual machine,
+your Airtime repo will be accessible at /vagrant-airtime.
+
