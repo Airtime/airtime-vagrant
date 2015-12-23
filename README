@@ -4,15 +4,21 @@ Airtime Vagrantfiles
 This repository contains Vagrantfiles for automated installation testing and development of Airtime
 on a number of different Linux distributions.
 
-To use these, first add the vagrant boxes corresponding to whichever distros you'd like to test.
+To get started with Vagrant on Ubuntu/Debian, you should install it and make sure you have the 
+VirtualBox provider guest additions plugin installed, by running:
+
+    $ sudo apt-get install vagrant
+    $ vagrant plugin install vagrant-vbguest
+
+To spin up a Vagrant box, first add the corresponding to whichever distros you'd like to test.
 You can add them by running:
 
-    vagrant box add ubuntu/vivid64 https://cloud-images.ubuntu.com/vagrant/vivid/current/vivid-server-cloudimg-amd64-vagrant-disk1.box
-    vagrant box add ubuntu/utopic64 https://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-amd64-vagrant-disk1.box
-    vagrant box add ubuntu/saucy64 https://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box
-    vagrant box add ubuntu/trusty64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
-    vagrant box add ubuntu/precise64 https://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
-    vagrant box add thoughtbot/debian-wheezy-64
+    $ vagrant box add ubuntu/vivid64 https://cloud-images.ubuntu.com/vagrant/vivid/current/vivid-server-cloudimg-amd64-vagrant-disk1.box
+    $ vagrant box add ubuntu/utopic64 https://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-amd64-vagrant-disk1.box
+    $ vagrant box add ubuntu/saucy64 https://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box
+    $ vagrant box add ubuntu/trusty64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+    $ vagrant box add ubuntu/precise64 https://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
+    $ vagrant box add debian/wheezy64 
 
 Second, ensure you have a checkout of Airtime in a directory beside this repository. Your directory
 layout should look something like this:
